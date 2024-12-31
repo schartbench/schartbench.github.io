@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="ChartPerception and mchartContext: Towards Comprehensive Chart Understanding">
+  <meta name="description" content="SChartBench: A Comprehensive Benchmark for Subjective Chart Question Answering [Experiment, Analysis & Benchmark]">
   <meta name="keywords"
     content="Chart question answering, subjective reasoning, benchmark dataset, context-aware paradigm">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ChartPerception and mchartContext: Towards Comprehensive Chart Understanding</title>
+  <title>SChartBench: A Comprehensive Benchmark for Subjective Chart Question Answering [Experiment, Analysis & Benchmark]</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
@@ -61,45 +61,44 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ChartPerception and mchartContext: Towards Comprehensive Chart
-            Understanding</h1>
+          <h1 class="title is-1 publication-title">SChartBench: A Comprehensive Benchmark for Subjective Chart Question Answering [Experiment, Analysis & Benchmark]</h1>
 
 
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <!-- Jingxuan Wei<sup>1,*</sup>,</span> -->
-              <!-- <span class="author-block">
-              Cheng Tan<sup>2,*</sup>,</span>
+              Jingxuan Wei<sup>2,4,†</sup>,</span>
+              <span class="author-block">
+              Nan xu<sup>1,3,†</sup>,</span>
             <span class="author-block">
-              Qi Chen<sup>1,*</sup>,
+              Junnan Zhu<sup>3,*</sup>,
             </span>
             <span class="author-block">
-              Gaowei Wu<sup>1,*</sup>,
+              Yanni Hao<sup>1</sup>,
             </span>
             <span class="author-block">
-              Siyuan Li<sup>2</sup>,
+              Gaowei Wu<sup>2,4</sup>,
             </span>
             <span class="author-block">
-              Zhangyang Gao<sup>2</sup>,
+              Qi Chen<sup>2,4</sup>,
             </span>
             <span class="author-block">
-              Linzhuang Sun<sup>1</sup>,
+              Bihui Yu<sup>2,4</sup>,
             </span>
             <span class="author-block">
-              Bihui Yu<sup>1</sup>,
+              Lei Wang<sup>1,3</sup>
             </span>
-            <span class="author-block">
-              Ruifeng Guo<sup>1,*</sup>
-            </span> -->
           </div>
 
           <div class="is-size-5 publication-authors">
-            <!-- <span class="author-block"><sup>1</sup>University of Chinese Academy of Sciences,</span> -->
-            <!-- <span class="author-block"><sup>2</sup>Westlake University</span> -->
+            <span class="author-block"><sup>1</sup>Beijing Wenge Technology Co., Ltd.,</span>
+            <span class="author-block"><sup>2</sup>Shenyang Institute of Computing Technology, Chinese Academy of Sciences</span>
+            <span class="author-block"><sup>3</sup>MAIS, Institute of Automation, Chinese Academy of Sciences</span>
+            <span class="author-block"><sup>4</sup>University of Chinese Academy of Sciences</span>
           </div>
           <div class="is-size-5 publication-authors">
-            <!-- <span class="author-block"><sup>*</sup>Equal contribution</span> -->
+            <span class="author-block"><sup>†</sup>Equal contribution</span>
+            <span class="author-block"><sup>*</sup>Corresponding Author</span>
           </div>
 
           <div class="column has-text-centered">
@@ -121,7 +120,7 @@
                   <span class="icon">
                     <i class="fas fa-database"></i>
                   </span>
-                  <span>Dataset</span>
+                  <!-- <span>Dataset</span> -->
                 </a>
 
                 <!-- Dataset Link.
@@ -144,10 +143,10 @@
   </div>
   </section>
 
-  <section class="hero is-small">
-    <div class="hero-body">
+  <!-- <section class="hero is-small">
+    <div class="hero-body"> -->
       <!-- <h2 class="title is-3" style="text-align: center;">Summary</h2> -->
-      <div class="container">
+      <!-- <div class="container">
         <center>
           <img src="./static/images/img1 (1).png" alt="Teaser" width="70%">
         </center>
@@ -159,9 +158,9 @@
         </div>
 
 
-      </div>
-    </div>
-  </section>
+      </div> -->
+    <!-- </div>
+  </section> -->
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -170,19 +169,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-
-            Chart question answering (CQA) is a multimodal task requiring systems to interpret structured visual data
-            and respond to natural language queries. While objective CQA tasks, such as extracting factual information,
-            have been extensively studied, subjective CQA tasks, which involve interpretative reasoning like trend
-            summarization and category analysis, remain underexplored. Existing methods focus predominantly on objective
-            tasks, relying on techniques such as direct image parsing and OCR-based data extraction, which often
-            introduce noise and redundancy, limiting their effectiveness in subjective tasks. To address these
-            challenges, we propose <b>ChartPerception</b>, a benchmark dataset tailored for subjective CQA tasks, and
-            <b>mChartContext</b>, a context-aware paradigm designed to extract essential chart elements. Experiments
-            conducted on three objective CQA benchmarks and our subjective benchmark demonstrate that mChartContext
-            achieves significant improvements over existing OCR-based methods in reasoning accuracy, setting a new
-            standard for subjective CQA evaluation.
-
+            Chart question answering (CQA) has become a critical multimodal task for evaluating the reasoning capabilities of vision-language models. While early approaches have shown promising performance by focusing on visual features or leveraging large-scale pre-training, most existing evaluations rely on fixed output formats, which fail to capture real-world, subjective tasks. In this paper, we introduce SChartBench, the first benchmark designed for subjective CQA in practical settings. SChartBench encompasses seven task categories: Chart Conversion, Chart OCR Recognition, Suggestions, Chart Category Analysis, Chart Summary, Chart Assistance, and Information Positioning. It features multilingual chart data and diverse chart formats. We conduct extensive evaluations on SChartBench with 14 mainstream multimodal models across two languages and seven chart types. We compare ChartLLM with three common CQA paradigms: instruction-following, OCR-enhanced, and chain-of-thought. The results have shown that ChartLLM-based methods significantly outperform these paradigms, highlighting the importance of flexible chart understanding for real-world CQA. These findings also point to new directions for developing more robust subjective chart reasoning in future research.
           </div>
         </div>
       </div>
@@ -208,17 +195,22 @@
         <div class="column is-four-fifths">
 
           <!-- <h2 class="title is-3">M3DocRAG: A Unified Framework for Multi-modal, Multi-page, Multi-document Understanding</h2> -->
-          <h2 class="title is-3">Method</h2>
+          <h2 class="title is-3">Challenges in Existing CQA Benchmarks</h2>
 
 
           <!-- <h3 class="title is-4">M3DocRAG: A Unified Framework for Multi-modal, Multi-page, Multi-document Understanding</h3> -->
 
           <div class="content has-text-justified">
-            The mChartContext module extracts structured context information from the chart,which is then combined with
-            visual features and the user prompt to generate responses.
+            To better understand the strengths and weaknesses of MLLMs in CQA tasks, several evaluation benchmarks have been proposed. Human evaluations are often highly variable and unstable due to individual and cultural differences. Therefore, most benchmarks focus on automatic metrics, such as ChartQA, OpenCQA, Chart-to-Text, and LineCap. These benchmarks mainly emphasize tasks such as generating statistical summaries or titles for scientific charts, relying on fixed output formats that can be evaluated using objective metrics. While they are effective for evaluation, they may not fully capture the actual challenges faced by professionals, especially those involving complex reasoning and decision making using real-world chart data. The figure below highlights the three major challenges in existing benchmarks: multilingual charts, diverse formats, and subjective answers. Models need to handle visual understanding and logical reasoning simultaneously. They must first recognize visual elements (such as color, structure, and spatial relationships) to extract meaningful information. Then, they need to analyze the logical connections between elements and answer complex queries, such as performing calculations, identifying trends, and finding relationships in data. In addition, the wide variety of chart types in the real world (e.g., bar charts, line charts, scatter plots) places higher requirements on the model's generalization ability and performing well on new and unseen formats.
           </div>
 
-          <img src="./static/images/img5.png" alt="Teaser" width="70%">
+          <img src="./static/images/fig1-1.png" alt="Teaser" width="70%">
+
+          <div class="content has-text-justified">
+            <center>
+              Challenges in Existing CQA Benchmarks: (A) Predominantly monolingual, focusing on English charts, limiting multilingual applicability; (B) Reliance on single-format structures and objective metrics, restricting diverse output evaluations; (C) Emphasis on objective tasks, neglecting subjective reasoning tasks such as trend summarization and viewpoint suggestion.
+            </center>
+          </div>
 
         </div>
       </div>
@@ -229,55 +221,19 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Dataset</h2>
-          <!-- <div class="content has-text-justified">
-
-          We propose IterInpaint, a new baseline for layout-guided image generation.
-          Unlike previous methods that generate all objects in a single step,
-          IterInpaint decomposes the image generation process into multiple steps
-          and uses a text-guided inpainting model to update foreground and background regions step-by-step.
-          This decomposition makes each generation step easier by allowing the model to focus on generating a single foreground object or background.
-          
-          We implement IterInpaint by extending Stable Diffusion, a public text-to-image model based on LDM.
-          To enable inpainting, we extend the U-Net of Stable Diffusion to take the mask and a context image as additional inputs.
-          
-        </div>         -->
-
-          <!-- <h3 class="title is-4">DiagramGenBenchmark</h3> -->
-          <!-- <div class="content has-text-justified">
-            <b>Data Acquisition:</b> This initial step involves gathering charts from open-source chart
-            question-answering datasets, as well as from GitHub and Overleaf repositories under CC BY 4.0 or MIT
-            licenses. This process resulted in an initial collection of 1,200 charts in both English and Chinese,
-            covering various types such as Pie, Common Bar, Scatter, Grouped Bar, Complex Line, Stacked Bar, and Common
-            Line.
-            <br><br>
-            <b>Manual Data Processing:</b> In this step, the collected charts undergo manual filtering and labeling to
-            ensure high data quality and relevance. This process includes categorizing each chart by type and verifying
-            its suitability for the dataset.
-            <br><br>
-            <b>LLM Generated Questions:</b> GPT-4o is used to create subjective questions based on the content of each
-            chart. These questions are classified into seven categories: Chart Classification Analysis, Suggestions,
-            Chart Conversion, Chart Summary, Assistance in Filling Out Charts, Chart OCR Recognition, and Information
-            Positioning.
-            <br><br>
-            <b>Question Review:</b> Following question generation, each question is manually reviewed to confirm that it
-            aligns with the chart’s context and meets the subjective task requirements.
-            <br><br>
-            <b>LLM Generated Answers:</b> In this step, GPT-4o generates answers for each validated question, producing
-            a complete question-answer pair for each chart.
-            <br><br>
-            <b>Answer Review:</b> Finally, human evaluators conduct a quality check on each image-question-answer
-            triplet. This review ensures that all components are coherent, accurate, and contextually relevant,
-            resulting in a curated subset of 757 high-quality data points for the ChartPerception dataset.
-          </div> -->
-
-          <div class="content has-text-justified">we introduce ChartPerception, a benchmark dataset specifically
-            designed for evaluating subjective CQA task. ChartPerception incorporates seven subjective task categories,
-            including trend analysis, chart summarization, category reasoning, viewpoint suggestion, chart
-            transformation, auxiliary chart completion, and information localization, each accompanied by tailored
-            evaluation metrics to assess interpretative reasoning.</div>
-          <img src="./static/images/img2.png" alt="Teaser" width="70%">
-          <img src="./static/images/img4.png" alt="Teaser" width="70%">
+          <h2 class="title is-3">Data Processing and Dataset Construction</h2>
+          <div class="content has-text-justified">
+            <div>
+              <b>Stage I: Chart Data Collection: </b>Chart data is collected from diverse open sources, including public datasets, GitHub repositories, and Overleaf projects, ensuring compliance with open licenses (e.g., CC BY 4.0, MIT) as per OpenCQA and ChartQA standards. The dataset, comprising over 1,200 charts in English and Chinese, covers a range of types such as Pie Charts, Stacked Bar Charts, Scatter Plots, Common and Grouped Bar Charts, as well as Simple and Complex Line Charts. Following collection, a manual filtering process ensures charts meet subjective reasoning requirements by excluding those with deficiencies (e.g., missing labels, unreadable fonts). This curation establishes a high-quality dataset foundation.  
+            </div>
+            
+            
+            <div><b>Stage II: Question-Answer Pair Generation: </b>To develop a benchmark for subjective CQA tasks, GPT-4o generates question-answer pairs across seven subjective reasoning categories. Prompts and few-shot examples guide the model to produce diverse, context-specific queries and responses, tailored to tasks such as trend summarization, actionable suggestions, and chart structure analysis. Task-specific questions are paired with answers that align with chart context and objectives, ensuring logical consistency and relevance. The resulting dataset, reviewed for coherence and factual accuracy, provides a robust tool for evaluating subjective reasoning in real-world CQA applications. </div> 
+            
+            
+            <div><b>Stage III: Rigorous Quality Assurance: </b>All chart-question-answer triplets undergo manual review by three annotators experienced in multimodal dataset curation. Evaluations focus on accuracy, clarity, and contextual relevance, with ambiguous or inconsistent triplets revised or excluded. This meticulous review ensures the dataset's alignment with subjective reasoning standards, establishing its reliability for real-world applications.</div></div>
+          <img src="./static/images/fig3-2-1.png" alt="Teaser" width="70%">
+          <!-- <img src="./static/images/img4.png" alt="Teaser" width="70%"> -->
 
           <br><br><br>
 
@@ -318,7 +274,7 @@
             visual fidelity in generated diagrams.
           </div> -->
           <div class="content has-text-justified">
-            <table>
+            <!-- <table>
               <caption>Objective Evaluation Results for Subjective CQA Tasks. Each column represents a specific
                 evaluation metric with CIDEr scores (higher is better). The last row shows the absolute improvement
                 achieved by integrating mChartContext.</caption>
@@ -334,9 +290,9 @@
                   <th>OCR (CIDEr ↑)</th>
                   <th>Pos. (CIDEr ↑)</th>
                 </tr>
-                <!-- <tr>
+                <tr>
                       <th colspan="1"></th>
-                  </tr> -->
+                  </tr> 
               </thead>
               <tbody>
                 <tr>
@@ -527,15 +483,26 @@
                   <td><strong>57.43</strong> (+18.76)</td>
                 </tr>
               </tbody>
-            </table>
-
+            </table> -->
+            
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <!-- <h2 class="title is-3">Dataset</h2> -->
+                <div class="content has-text-justified">Table shows the performance of four types of paradigms on SChartBench (subjective tasks) and three objective datasets. For subjective tasks, Avg. GPT-4o score is the primary metric, while ACC evaluates Chart Category Analysis and Avg. CIDEr assesses the remaining six tasks. Objective datasets use Avg. ACC and Avg. BLEU for evaluation. The best results are highlighted in bold, and the second-best results are underlined. ChartLLM-based methods achieve the most consistent improvements across all tasks. For example, Qwen2-VL improves its Avg. GPT-4o score from 47.89 (Instruction-following-based) to 56.10 with ChartLLM, while IXC-2.5 increases from 43.31 to 51.88, showcasing significant gains in subjective reasoning. OCR-enhanced methods benefit from comprehensive textual extraction but often introduce redundancy and noise, which can limit their performance in tasks requiring holistic reasoning. COT-based methods enhance reasoning through step-by-step processes, leading to moderate gains. However, their reliance on decomposition strategies makes them less effective in tasks demanding a more integrated understanding of chart content. These results emphasize the robustness and adaptability of ChartLLM-based methods in addressing diverse reasoning challenges.</div>
+                <img src="./static/images/result.png" alt="Teaser" width="95%">
+                <div class="content has-text-justified">
+                  <center>
+                    <b>Note:</b> GPT-4o score serves as the primary metric for subjective tasks, with ACC evaluating Chart Category Analysis and CIDEr assessing the remaining six tasks. Objective datasets are evaluated using ACC and BLEU. The best results are highlighted in <b>bold</b> and the second-best results are <u>underlined</u>.
+                  </center>
+                </div>
+                <!-- <img src="./static/images/img4.png" alt="Teaser" width="70%"> -->
 
           </div>
           <br><br><br>
 
 
 
-          <div class="content has-text-justified">
+          <!-- <div class="content has-text-justified">
             <table style="width:100%; border-collapse:collapse;">
               <thead>
                 <tr>
@@ -748,16 +715,16 @@
               <caption>Objective Evaluation Results on Representative CQA Datasets (ChartQA, Chart-to-Text, OpenCQA).
                 For each metric, the values in parentheses indicate the improvement achieved by integrating
                 mChartContext.</caption>
-            </table>
+            </table> -->
 
             <br><br><br>
 
 
 
-            <table style="width:100%; border-collapse:collapse;">
+            <!-- <table style="width:100%; border-collapse:collapse;">
               <thead>
                 <tr>
-                  <!-- <th rowspan="2" style="border:1px solid rgb(219, 219, 219);">Models</th> -->
+                  <th rowspan="2" style="border:1px solid rgb(219, 219, 219);">Models</th> 
                   <th rowspan="2" style="border:2px solid rgb(219, 219, 219); border-top:none;border-right:none;border-left:none;text-align:center; vertical-align: middle;">Models</th>
                   <th rowspan="2" style="border:2px solid rgb(219, 219, 219); text-align:center; border-top:none;border-right:none;border-left:none; vertical-align: middle;">Size</th>
                   <th colspan="3"
@@ -904,7 +871,7 @@
               <caption>Comparison of Different Context Extraction Paradigms on ChartQA, Chart-to-Text, and OpenCQA
                 Datasets. Each paradigm was applied using Qwen2-VL-7B and InternLM-XComposer2.5 models to assess the
                 impact of OCR, caption, summary, chart2table, and mChartContext methods on performance.</caption>
-            </table>
+            </table> -->
 
           </div>
 
@@ -926,7 +893,7 @@
       <pre><code>
       <!-- @journal{Cho2024M3DocRAG,
   author    = {Jaemin Cho and Ozan İrsoy and Debanjan Mahata and Yujie He and Mohit Bansal},
-  title     = {ChartPerception and mchartContext: Towards Comprehensive Chart Understanding},
+  title     = {SChartBench: A Comprehensive Benchmark for Subjective Chart Question Answering [Experiment, Analysis & Benchmark]},
   year      = {2024},
 } -->
 </code></pre>
